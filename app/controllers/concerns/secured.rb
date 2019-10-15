@@ -23,4 +23,12 @@ module Secured
     def auth_token
       JsonWebToken.verify(http_token)
     end
-  end
+
+    def token_auth0_user_id
+      auth_token[0]["sub"]
+    end
+
+    def current_user
+      @user = User.find_by(auth0_user_id: token_auth0_user_id)
+    end
+  end 

@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2019_10_10_151046) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer "auth0_user_id"
+    t.string "auth0_user_id"
     t.string "email"
     t.string "first_name"
     t.string "last_name"
