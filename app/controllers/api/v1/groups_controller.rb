@@ -1,9 +1,13 @@
 class Api::V1::GroupsController < ApplicationController
-    # include Secured
+    include Secured
 
     def index
-        groups = Group.all
-        render json: groups
+        user = current_user
+        groups = user.groups
+        options = {
+            include: [:admin]
+        }
+        render json: {groups: GroupSerializer.new(groups, options), current_user: UserSerializer.new(user)}
     end
 
     def create
