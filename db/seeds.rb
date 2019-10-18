@@ -140,6 +140,8 @@ Message.create(group_id: Group.find_by(name: 'GymPact X').id, user_id: User.find
 Workout.create(group_id: Group.find_by(name: 'GymPact XI').id, user_id: User.find_by(email: 'valentino.wong@gmail.com').id, datetime: Time.parse("2018-05-08 8:00 AM"), description: "3 Mile Run", approved: false)
 Workout.create(group_id: Group.find_by(name: 'GymPact XI').id, user_id: User.find_by(email: 'valentino.wong@gmail.com').id, datetime: Time.parse("2018-05-09 10:00 AM"), description: "5 Mile Run", approved: true)
 Workout.create(group_id: Group.find_by(name: 'GymPact XI').id, user_id: User.find_by(email: 'valentino.wong@gmail.com').id, datetime: Time.parse("2018-05-10 12:00 PM"), description: "10 Mile Run", approved: false)
+Workout.create(group_id: Group.find_by(name: 'GymPact X').id, user_id: User.find_by(email: 'valentino.wong@gmail.com').id, datetime: Time.parse("2018-01-02 12:00 PM"), description: "15 Mile Run", approved: false)
+
 
 Tag.create(name: 'Ab Workout')
 Tag.create(name: 'Arm Bicycle')

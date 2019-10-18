@@ -20,6 +20,15 @@ class Api::V1::GroupsController < ApplicationController
         end
     end
 
+    def show
+        user = current_user
+        group = Group.find(params[:id])
+        options = {
+            include: [:users, :workouts, :admin]
+        }
+        render json: GroupSerializer.new(group, options)
+    end
+
     private
 
     def group_params

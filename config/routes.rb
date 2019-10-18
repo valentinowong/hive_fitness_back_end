@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
       resources :users, only: [:index, :create, :show]
 
-      resources :groups, only: [:index, :create] do
+      resources :groups, only: [:index, :create, :show] do
 
         resources :workouts, only: [:index, :show, :create]
 
