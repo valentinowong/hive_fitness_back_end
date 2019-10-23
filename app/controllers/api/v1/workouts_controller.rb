@@ -15,13 +15,15 @@ class Api::V1::WorkoutsController < ApplicationController
     def create
         user = current_user
         workout = user.workouts.build(workout_params)
+        group = Group.find(params[:group_id])
+        workouts = Workout.where(group_id: group.id)
 
         if !!params[:workout][:image]
             workout.image.attach(io: image_io, filename: image_name)
         end
 
         if workout.save
-            render json: WorkoutSerializer.new(workout)
+            render json: WorkoutSerializer.new(workouts)
         else
             render json: {errors: workout.errors.full_messages}, status: 422
         end

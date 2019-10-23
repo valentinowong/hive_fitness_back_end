@@ -4,4 +4,5 @@ class GroupSerializer
   belongs_to :admin, key: :user_id
   has_many :workouts
   has_many :users
+  has_many :goals
 end

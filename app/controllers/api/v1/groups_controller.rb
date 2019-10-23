@@ -24,7 +24,7 @@ class Api::V1::GroupsController < ApplicationController
         user = current_user
         group = Group.find(params[:id])
         options = {
-            include: [:users, :workouts, :admin]
+            include: [:users, :workouts, :admin, :goals]
         }
         render json: GroupSerializer.new(group, options)
     end
