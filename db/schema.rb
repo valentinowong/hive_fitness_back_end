@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2019_10_18_172034) do
   end
 
   create_table "penalties", force: :cascade do |t|
+    t.integer "group_id"
     t.integer "goal_days"
     t.float "amount"
     t.datetime "created_at", null: false

@@ -20,6 +20,15 @@ User.create(first_name: 'Sebastian', last_name: 'Karolkiewicz', email: 'sebastia
 
 Group.create(name: "Don't Stop Git It Git It", start_date: Date.parse("September 30, 2019"), end_date: Date.parse("December 29, 2019"), active: true, admin_id: User.find_by(email: 'valentino.wong@gmail.com').id)
 
+Penalty.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, goal_days: 0, amount: 0)
+Penalty.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, goal_days: 1, amount: 15)
+Penalty.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, goal_days: 2, amount: 7.5)
+Penalty.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, goal_days: 3, amount: 5)
+Penalty.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, goal_days: 4, amount: 3.75)
+Penalty.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, goal_days: 5, amount: 2.75)
+Penalty.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, goal_days: 6, amount: 2)
+Penalty.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, goal_days: 6, amount: 1.5)
+
 UserGroup.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'valentino.wong@gmail.com').id)
 UserGroup.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'amarchitelli1993@joinhivehealth.com').id)
 UserGroup.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'alyssafarina695@joinhivehealth.com').id)
@@ -201,7 +210,9 @@ Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, use
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'valentino.wong@gmail.com').id, datetime: Time.parse("2019-10-16 6:30 PM"), description: "CrossFit Endurance", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'valentino.wong@gmail.com').id, datetime: Time.parse("2019-10-19 9:30 AM"), description: "18 mile run", approved: true)
 
-Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'valentino.wong@gmail.com').id, datetime: Time.parse("2019-10-21 6:30 PM"), description: "CrossFit EWOD")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'valentino.wong@gmail.com').id, datetime: Time.parse("2019-10-21 6:30 PM"), description: "CrossFit EWOD")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'valentino.wong@gmail.com').id, datetime: Time.parse("2019-10-22 6:30 PM"), description: "CrossFit EWOD")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'valentino.wong@gmail.com').id, datetime: Time.parse("2019-10-23 7:00 PM"), description: "CrossFit Endurance")
 
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'amarchitelli1993@joinhivehealth.com').id, datetime: Time.parse("2019-09-30 12:30 PM"), description: "Lunchtime Lift", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'amarchitelli1993@joinhivehealth.com').id, datetime: Time.parse("2019-10-02 12:30 PM"), description: "Lunchtime Lift", approved: true)
@@ -217,7 +228,9 @@ Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, use
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'amarchitelli1993@joinhivehealth.com').id, datetime: Time.parse("2019-10-16 12:30 PM"), description: "Lunchtime Lift", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'amarchitelli1993@joinhivehealth.com').id, datetime: Time.parse("2019-10-17 12:30 PM"), description: "Lunchtime Lift", approved: true)
 
-Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'amarchitelli1993@joinhivehealth.com').id, datetime: Time.parse("2019-10-21 12:30 PM"), description: "Lunchtime Lift")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'amarchitelli1993@joinhivehealth.com').id, datetime: Time.parse("2019-10-21 12:30 PM"), description: "Lunchtime Lift")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'amarchitelli1993@joinhivehealth.com').id, datetime: Time.parse("2019-10-23 12:30 PM"), description: "Lunchtime Lift")
+
 
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'alyssafarina695@joinhivehealth.com').id, datetime: Time.parse("2019-10-02 5:30 AM"), description: "3 mile run", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'alyssafarina695@joinhivehealth.com').id, datetime: Time.parse("2019-10-03 5:30 AM"), description: "Reformer Class", approved: true)
@@ -240,7 +253,7 @@ Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, use
 
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'andrew.tack.recapllc@joinhivehealth.com').id, datetime: Time.parse("2019-10-19 10:00 AM"), description: "Power Lifting Session", approved: true)
 
-Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'andrew.tack.recapllc@joinhivehealth.com').id, datetime: Time.parse("2019-10-21 7:30 PM"), description: "Power Lifting Session")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'andrew.tack.recapllc@joinhivehealth.com').id, datetime: Time.parse("2019-10-21 7:30 PM"), description: "Power Lifting Session")
 
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'hyoeun93@joinhivehealth.com').id, datetime: Time.parse("2019-10-01 7:30 PM"), description: "Yoga Class", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'hyoeun93@joinhivehealth.com').id, datetime: Time.parse("2019-10-04 6:30 PM"), description: "Yoga Class", approved: true)
@@ -251,7 +264,7 @@ Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, use
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'hyoeun93@joinhivehealth.com').id, datetime: Time.parse("2019-10-15 8:00 PM"), description: "Yoga Class", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'hyoeun93@joinhivehealth.com').id, datetime: Time.parse("2019-10-18 6:00 PM"), description: "Pilates Class", approved: true)
 
-Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'hyoeun93@joinhivehealth.com').id, datetime: Time.parse("2019-10-22 6:45 PM"), description: "Yoga Class")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'hyoeun93@joinhivehealth.com').id, datetime: Time.parse("2019-10-22 6:45 PM"), description: "Yoga Class")
 
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'jshock12@joinhivehealth.com').id, datetime: Time.parse("2019-09-30 6:45 PM"), description: "Lifting Session", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'jshock12@joinhivehealth.com').id, datetime: Time.parse("2019-10-03 7:00 PM"), description: "Lifting Session", approved: true)
@@ -263,8 +276,8 @@ Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, use
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'jshock12@joinhivehealth.com').id, datetime: Time.parse("2019-10-16 7:15 PM"), description: "Lifting Session", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'jshock12@joinhivehealth.com').id, datetime: Time.parse("2019-10-17 9:03 PM"), description: "2 mile run", approved: true)
 
-Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'jshock12@joinhivehealth.com').id, datetime: Time.parse("2019-10-21 7:22 PM"), description: "Lifting Session")
-Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'jshock12@joinhivehealth.com').id, datetime: Time.parse("2019-10-22 6:00 AM"), description: "2.5 mile run")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'jshock12@joinhivehealth.com').id, datetime: Time.parse("2019-10-21 7:22 PM"), description: "Lifting Session")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'jshock12@joinhivehealth.com').id, datetime: Time.parse("2019-10-22 6:00 AM"), description: "2.5 mile run")
 
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'meghann.mccool.walsh@joinhivehealth.com').id, datetime: Time.parse("2019-10-08 8:00 PM"), description: "2 mile run", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'meghann.mccool.walsh@joinhivehealth.com').id, datetime: Time.parse("2019-10-10 8:30 PM"), description: "SLT Class", approved: true)
@@ -275,8 +288,8 @@ Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, use
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'meghann.mccool.walsh@joinhivehealth.com').id, datetime: Time.parse("2019-10-18 6:35 PM"), description: "Soul Cycle Class", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'meghann.mccool.walsh@joinhivehealth.com').id, datetime: Time.parse("2019-10-19 10:00 AM"), description: "2 mile run", approved: true)
 
-Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'meghann.mccool.walsh@joinhivehealth.com').id, datetime: Time.parse("2019-10-21 7:00 PM"), description: "Yoga Class")
-Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'meghann.mccool.walsh@joinhivehealth.com').id, datetime: Time.parse("2019-10-22 7:00 AM"), description: "Swerve Spin Class")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'meghann.mccool.walsh@joinhivehealth.com').id, datetime: Time.parse("2019-10-21 7:00 PM"), description: "Yoga Class")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'meghann.mccool.walsh@joinhivehealth.com').id, datetime: Time.parse("2019-10-22 7:00 AM"), description: "Swerve Spin Class")
 
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'uberkumar@joinhivehealth.com').id, datetime: Time.parse("2019-10-02 7:00 PM"), description: "Rock Climbing Session", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'uberkumar@joinhivehealth.com').id, datetime: Time.parse("2019-10-04 7:00 PM"), description: "Rock Climbing Session", approved: true)
@@ -288,7 +301,7 @@ Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, use
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'uberkumar@joinhivehealth.com').id, datetime: Time.parse("2019-10-15 7:00 PM"), description: "Rock Climbing Session", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'uberkumar@joinhivehealth.com').id, datetime: Time.parse("2019-10-18 7:00 PM"), description: "Rock Climbing Session", approved: true)
 
-Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'uberkumar@joinhivehealth.com').id, datetime: Time.parse("2019-10-22 6:30 PM"), description: "Rock Climbing Session")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'uberkumar@joinhivehealth.com').id, datetime: Time.parse("2019-10-22 6:30 PM"), description: "Rock Climbing Session")
 
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'greg.dwyer@joinhivehealth.com').id, datetime: Time.parse("2019-09-30 6:30 PM"), description: "Dodgeball Game", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'greg.dwyer@joinhivehealth.com').id, datetime: Time.parse("2019-10-02 6:30 PM"), description: "Soccer Game", approved: true)
@@ -302,7 +315,8 @@ Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, use
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'greg.dwyer@joinhivehealth.com').id, datetime: Time.parse("2019-10-16 6:30 PM"), description: "Soccer Game", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'greg.dwyer@joinhivehealth.com').id, datetime: Time.parse("2019-10-18 6:30 PM"), description: "Basketball Game", approved: true)
 
-Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'greg.dwyer@joinhivehealth.com').id, datetime: Time.parse("2019-10-21 6:30 PM"), description: "Dodgeball Game")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'greg.dwyer@joinhivehealth.com').id, datetime: Time.parse("2019-10-21 6:30 PM"), description: "Dodgeball Game")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'greg.dwyer@joinhivehealth.com').id, datetime: Time.parse("2019-10-23 6:30 PM"), description: "Soccer Game")
 
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'supui.lam@joinhivehealth.com').id, datetime: Time.parse("2019-10-01 6:30 PM"), description: "Basketball Practice", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'supui.lam@joinhivehealth.com').id, datetime: Time.parse("2019-10-03 6:30 PM"), description: "Basketball Practice", approved: true)
@@ -313,7 +327,7 @@ Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, use
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'supui.lam@joinhivehealth.com').id, datetime: Time.parse("2019-10-15 6:30 PM"), description: "Basketball Practice", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'supui.lam@joinhivehealth.com').id, datetime: Time.parse("2019-10-17 6:30 PM"), description: "Basketball Practice", approved: true)
 
-Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'supui.lam@joinhivehealth.com').id, datetime: Time.parse("2019-10-22 6:30 PM"), description: "Basketball Practice")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'supui.lam@joinhivehealth.com').id, datetime: Time.parse("2019-10-22 6:30 PM"), description: "Basketball Practice")
 
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'sebastian.karolkiewicz@joinhivehealth.com').id, datetime: Time.parse("2019-09-30 12:00 PM"), description: "Lunchtime Lift", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'sebastian.karolkiewicz@joinhivehealth.com').id, datetime: Time.parse("2019-10-02 12:00 PM"), description: "Lunchtime Lift", approved: true)
@@ -330,8 +344,8 @@ Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, use
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'sebastian.karolkiewicz@joinhivehealth.com').id, datetime: Time.parse("2019-10-16 12:00 PM"), description: "Lunchtime Lift", approved: true)
 Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'sebastian.karolkiewicz@joinhivehealth.com').id, datetime: Time.parse("2019-10-17 12:00 PM"), description: "Lunchtime Lift", approved: true)
 
-Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'sebastian.karolkiewicz@joinhivehealth.com').id, datetime: Time.parse("2019-10-21 12:00 PM"), description: "Lunchtime Lift")
-Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'sebastian.karolkiewicz@joinhivehealth.com').id, datetime: Time.parse("2019-10-22 12:00 PM"), description: "Lunchtime Lift")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'sebastian.karolkiewicz@joinhivehealth.com').id, datetime: Time.parse("2019-10-21 12:00 PM"), description: "Lunchtime Lift")
+# Workout.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'sebastian.karolkiewicz@joinhivehealth.com').id, datetime: Time.parse("2019-10-22 12:00 PM"), description: "Lunchtime Lift")
 
 Tag.create(name: 'Ab Workout')
 Tag.create(name: 'Arm Bicycle')
