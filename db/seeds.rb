@@ -27,7 +27,7 @@ Penalty.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, goa
 Penalty.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, goal_days: 4, amount: 3.75)
 Penalty.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, goal_days: 5, amount: 2.75)
 Penalty.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, goal_days: 6, amount: 2)
-Penalty.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, goal_days: 6, amount: 1.5)
+Penalty.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, goal_days: 7, amount: 1.5)
 
 UserGroup.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'valentino.wong@gmail.com').id)
 UserGroup.create(group_id: Group.find_by(name: "Don't Stop Git It Git It").id, user_id: User.find_by(email: 'amarchitelli1993@joinhivehealth.com').id)

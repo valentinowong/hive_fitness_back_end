@@ -5,4 +5,5 @@ class GroupSerializer
   has_many :workouts
   has_many :users
   has_many :goals
+  has_many :penalties
 end
