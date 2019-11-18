@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_one_attached :profile_photo
     has_many :user_groups
     has_many :groups, through: :user_groups
     has_many :goals, through: :user_groups

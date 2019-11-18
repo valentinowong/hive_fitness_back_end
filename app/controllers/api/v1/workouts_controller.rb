@@ -40,11 +40,11 @@ class Api::V1::WorkoutsController < ApplicationController
 
     def image_io
         decoded_image = Base64.decode64(params[:workout][:image])
-            StringIO.new(decoded_image)
-      end
+        StringIO.new(decoded_image)
+    end
       
-      def image_name
+    def image_name
         params[:workout][:file_name]
-      end
+    end
 
 end
