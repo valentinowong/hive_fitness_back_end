@@ -13,15 +13,15 @@ module Secured
     rescue JWT::VerificationError, JWT::DecodeError
       render json: { errors: ['Not Authenticated'] }, status: :unauthorized
     end
+
+    def auth_token
+      JsonWebToken.verify(http_token)
+    end
   
     def http_token
       if request.headers['Authorization'].present?
         request.headers['Authorization'].split(' ').last
       end
-    end
-  
-    def auth_token
-      JsonWebToken.verify(http_token)
     end
 
     def token_auth0_user_id
